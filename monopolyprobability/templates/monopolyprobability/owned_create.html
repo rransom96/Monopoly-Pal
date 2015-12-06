@@ -1,0 +1,14 @@
+{% extends 'monopolyprobability/property_base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+    <div style="width: 750px; margin: 0 auto;">
+    <form method="post" action="{% url 'owned_create' %}" style="padding-top: 20px">
+    {% csrf_token %}
+         <input type="hidden" name="next" value="{{ next }}">
+         {% bootstrap_form owned_form layout='inline' %}
+         <input class="btn btn-primary btn-lg btn-block" type="submit" value="Owned">
+    </form>
+    <img src="http://www.sportcentretees.com/products/square/7276467.png" class="img-responsive" alt="Responsive image" style="margin: 0 auto; padding-top: 20px; width: 400px;">
+    </div>
+{% endblock %}

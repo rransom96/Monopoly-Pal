@@ -1,0 +1,30 @@
+{% extends 'monopolyprobability/property_base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+<div style="width: 350px; background-color: white; margin: 0 auto;">
+<h2 class="text-center">Monopoly Pal</h2>
+    <p class="text-center"><em>Properties in order of how good they are to buy</em></p>
+<div>
+    <ol style="padding-left: 100px;">
+    {% for property in property %}
+        {% if property.color.id == 2 %}
+        <li style="list-style: none;color: lightblue;">{{ property.name }}</li>
+        {% elif property.color.id == 8 %}
+        <li style="list-style: none;color: darkblue;">{{ property.name }}</li>
+        {% elif property.color.id == 6%}
+        <li style="list-style: none;color: gold;">{{ property.name }}</li>
+        {% else %}
+        <li style="list-style: none;color: {{ property.color }};position: relative;">{{ property.name }}</li>
+        {% endif %}
+    {% endfor %}
+    </ol>
+</div>
+    <div class="text-center" style="padding-bottom: 10px">
+    <a class="btn btn-primary" href='{% url 'owned_create' %}' role="button">Owned</a>
+    <a class="btn btn-primary" href='{% url 'trade_owned' %}' role="button">Trade</a>
+    <a class="btn btn-primary" href='{% url 'delete_owned' %}' role="button">New Game</a>
+    <a class="btn btn-primary" href='{% url 'owned_other_create' %}' role="button">Grrrr!</a>
+    </div>
+    </div>
+{% endblock %}

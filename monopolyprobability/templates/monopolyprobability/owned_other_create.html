@@ -1,0 +1,14 @@
+{% extends 'monopolyprobability/property_base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+    <div style="width: 750px; margin: 0 auto;">
+    <form method="post" action="{% url 'owned_other_create' %}" style="padding-top: 20px">
+    {% csrf_token %}
+         <input type="hidden" name="next" value="{{ next }}">
+         {% bootstrap_form owned_form layout='inline' %}
+         <input class="btn btn-primary btn-lg btn-block" type="submit" value="Someone Took It">
+    </form>
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTVsRHQUPv2PuqOgaNV3YHHA2Bk96_23RQtq-hUH_awPAle-VpnPA" class="img-responsive" alt="Responsive image" style="margin: 0 auto; padding-top: 20px; width: 400px;">
+    </div>
+{% endblock %}
