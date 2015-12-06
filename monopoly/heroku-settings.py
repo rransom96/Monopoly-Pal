@@ -2,7 +2,7 @@ from .settings import *
 import os
 import dj_database_url
 
-DEBUG = True
+DEBUG = False
 SECRET_KEY = os.environ['SECRET_KEY']
 
 BLACKLIST = ['django_extensions', 'debug_toolbar']
