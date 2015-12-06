@@ -1,1 +1,10 @@
-/Users/Jhonais/sandbox/Monopoly-Pal/.direnv/python-3.5.0/lib/python3.5/site-packages/debug_toolbar/static/debug_toolbar/js/toolbar.sql.js
+(function ($) {
+    $('#djDebug a.djDebugToggle').on('click', function(e) {
+        e.preventDefault();
+        $(this).parent().find('.djDebugCollapsed').toggle();
+        $(this).parent().find('.djDebugUncollapsed').toggle();
+    });
+    djdt.applyStyle('background-color');
+    djdt.applyStyle('left');
+    djdt.applyStyle('width');
+})(djdt.jQuery);

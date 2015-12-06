@@ -1,1 +1,11 @@
-/Users/Jhonais/sandbox/Monopoly-Pal/.direnv/python-3.5.0/lib/python3.5/site-packages/debug_toolbar/static/debug_toolbar/js/toolbar.template.js
+(function ($) {
+    var uarr = String.fromCharCode(0x25b6),
+        darr = String.fromCharCode(0x25bc);
+
+    $('a.djTemplateShowContext').on('click', function() {
+        var arrow = $(this).children('.toggleArrow');
+        arrow.html(arrow.html() == uarr ? darr : uarr);
+        $(this).parent().next().toggle();
+        return false;
+    });
+})(djdt.jQuery);

@@ -1,1 +1,2 @@
-/Users/Jhonais/sandbox/Monopoly-Pal/.direnv/python-3.5.0/lib/python3.5/site-packages/django/contrib/admin/static/admin/fonts/README.txt
+Roboto webfont source: https://www.google.com/fonts/specimen/Roboto
+Weights used in this project: Light (300), Regular (400), Bold (700)
