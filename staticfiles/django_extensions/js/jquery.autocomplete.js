@@ -1,0 +1,1 @@
+/Users/Jhonais/sandbox/Monopoly-Pal/.direnv/python-3.5.0/lib/python3.5/site-packages/django_extensions/static/django_extensions/js/jquery.autocomplete.js
