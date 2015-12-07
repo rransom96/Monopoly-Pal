@@ -21,7 +21,6 @@ def delete(request):
     return HttpResponseRedirect(reverse('list_properties'))
 
 
-@login_required
 def create_owned(request):
     if request.method == 'POST':
         form = OwnedForm(request.POST)
