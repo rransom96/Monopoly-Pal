@@ -1,4 +1,4 @@
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, render_to_response
@@ -64,3 +64,15 @@ def create_owned_other(request):
     return render_to_response('monopolyprobability/owned_other_create.html',
                               {"owned_form": form},
                               context_instance=RequestContext(request))
+
+
+def other_owned(request):
+    property = Property.objects.filter(owner=2)
+    property = sorted(property, key=lambda x: x.value())
+    return render(request, 'monopolyprobability/property_list.html', {'property':property})
+
+
+def owned(request):
+    property = Property.objects.filter(owner=1)
+    property = sorted(property, key=lambda x: x.value())
+    return render(request, 'monopolyprobability/property_list.html', {'property':property})

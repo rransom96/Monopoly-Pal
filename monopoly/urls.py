@@ -24,5 +24,7 @@ urlpatterns = [
         name='owned_create'),
     url(r'^delete/$', 'monopolyprobability.views.delete', name='delete_owned'),
     url(r'^trade/$', 'monopolyprobability.views.trade', name='trade_owned'),
-    url(r'^grrr/$', 'monopolyprobability.views.create_owned_other', name='owned_other_create')
+    url(r'^grrr/$', 'monopolyprobability.views.create_owned_other', name='owned_other_create'),
+    url(r'^other/$', 'monopolyprobability.views.other_owned', name='other_owned'),
+    url(r'^owned/$', 'monopolyprobability.views.owned', name='owned'),
 ]

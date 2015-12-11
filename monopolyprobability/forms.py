@@ -19,9 +19,11 @@ class TradeForm(OwnedForm):
     def save(self, force_insert=False, force_update=False, using=None):
         data = self.cleaned_data
         Owned.objects.get(property=data['property_losing']).delete()
+        owned1 = Owned(property=data['property_losing'], user=User.objects.get(pk=2))
         owned = Owned(property=data['property'], user=User.objects.get(pk=1))
         owned.save()
-        return owned
+        owned1.save()
+        return owned, owned1
 
 
 class OwnedOtherForm(forms.Form):

@@ -21,10 +21,13 @@
     </ol>
 </div>
     <div class="text-center" style="padding-bottom: 10px">
-    <a class="btn btn-primary" href='{% url 'owned_create' %}' role="button">Owned</a>
+    <a class="btn btn-primary" href='{% url 'owned_create' %}' role="button">Buy</a>
     <a class="btn btn-primary" href='{% url 'trade_owned' %}' role="button">Trade</a>
     <a class="btn btn-primary" href='{% url 'delete_owned' %}' role="button">New Game</a>
     <a class="btn btn-primary" href='{% url 'owned_other_create' %}' role="button">Grrrr!</a>
+    <a class="btn btn-primary" href='{% url 'owned' %}' role="button" style="margin-top: 5px">Owned</a>
+    <a class="btn btn-primary" href='{% url 'other_owned' %}' role="button" style="margin-top: 5px">They Own</a>
+    <a class="btn btn-primary" href='{% url 'list_properties' %}' role="button" style="margin-top: 5px">Home</a>
     </div>
     </div>
 {% endblock %}
