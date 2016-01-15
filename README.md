@@ -1,4 +1,3 @@
-# TIY-hackathon
 # Monopoly Optimizer
 
 Based off rent prices, probability of landing on a space, and properties in a set calculate which spt you should buy next.
